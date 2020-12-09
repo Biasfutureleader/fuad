@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+*{
+    font-family: poppins;
+    margin: 0;
+    padding: 0;
+}
+
+.opacity {
+    display: none;
+    height: 0;
+    width: 0;
+    z-index: -1;
+}
+
+.opacity.active {
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    z-index: 4;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.opacity.active .lembar {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4), 0 0 25px rgba(0, 0, 0, 0.3), 0 0 30px rgba(0, 0, 0, 0.2) ;
+    border-radius: 4px;
+    background-color: #eef;
+    top: 45%;
+    left: 50%;
+    height: 80vh;
+    width: 120vh;
+}
+
+.opacity.active .lembar p {
+    padding: 0 20px;
+}
+
+.opacity.active .lembar p span {
+    color: #2b9aa7;
+    font-size: 24px;
+}
+
+.close {
+    display: none !important;
+    background-color: #fff;
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    top: 50px;
+    right: 50px;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.close.active {
+    display: block !important;
+    background-color: #fff;
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    top: 50px;
+    right: 50px;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.close:hover {
+    background-color: #aaa;
+}
+
+.close .icon {
+    margin-top: 2.5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.close .icon .fas {
+    font-size: 32px;
+}
+
+.close .icon .fas:hover {
+    cursor: pointer;
+    font-size: 32px;
+}
+
+.path {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.path svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 153px;
+}
+
+.path .shape-fill {
+    fill:  #3cb4c2;
+}
+
+.navbar {
+    position: relative;
+    z-index: 1;
+}
+
+.navbar .navbar-brand {
+    color: #f6e58d;
+}
+
+.navbar .navbar-brand:hover {
+    color: #fff;
+}
+
+.navbar-nav a {
+    color: #f6e58d !important;
+}
+
+.navbar-nav a:hover {
+    color: #fff !important;
+}
+
+.card .card-body {
+    height: 80vh;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* title */
+.number .card .title {
+    margin-top: 150px;
+}
+
+.number2 .card .title {
+    margin-top: 120px;
+   
+}
+
+.number3 .card .title {
+    margin-top: 120px;
+    margin-left: 30px;
+}
+
+.number4 .card .title {
+    margin-top: 100px;
+    margin-left: 30px;
+}
+
+.number5 .card .title, .number6 .card .title  {
+    margin-top: 100px;
+    margin-left: 30px;
+}
+
+
+
+/* title */
+
+
+.card .jumboButton {
+    padding: 7px 10px;
+    color: #fff;
+    border: none;
+    background-color: #2b9aa7;
+    border-radius: 8px;
+}
+
+.card .jumboButton:hover {
+    color: #2b9aa7;
+    background-color: #f6e58d;
+}
+
+.card .jumboButton2 {
+    padding: 5px 8px;
+    color: #f1c40f;
+    border: 2px solid #f1c40f;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+.card .jumboButton2:hover {
+    color: #fff;
+    border: 2px solid#2b9aa7;
+    background-color: #2b9aa7;
+}
+
+.card .title span {
+    color: #f1c40f;
+}
+
+.card .title h1 {
+    animation: blowMin 1.5s ease-in-out;
+    position: relative;
+    transition: ease-in-out 2s;
+}
+
+@keyframes blowMin {
+    0% {opacity: 0; top: -25px;}
+    100% {opacity: 1; top: 0px;}
+}
+
+.card .title p {
+    color: #636e72;
+    font-weight: lighter;
+    animation: blowUp 2.5s ease-in-out;
+    position: relative;
+    transition: ease-in-out 2s;
+}
+
+@keyframes blowUp {
+    0% { opacity: 0; left: -25px;}
+    100% {opacity: 1; left: 0px;}
+}
+
+.card .title .fas {
+    font-size: 32px;
+    animation: blowMin 3s ease-in-out;
+}
+
+
+.card .putri {
+    width: 90%;
+    height: 90%;
+    position: relative;
+    animation: mymove 5s infinite ease;
+}
+
+@keyframes mymove {
+    0% {top: 0px;}
+  50% {top: 50px;}
+  100% {top: 0px;}
+}
+
+.card .putri4, .putri5 {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    animation: mymove2 6s infinite ease;
+}
+
+
+@keyframes mymove2 {
+    0% {top: 0px;}
+  50% {top: 70px;}
+  100% {top: 0px;}
+}
+
+.card .putri6 {
+    width: 95%;
+    height: 95%;
+    position: relative;
+    animation: mymove3 4s infinite ease;
+}
+
+@keyframes mymove3 {
+    0% {top: 0px;}
+    50% {top: 45px;}
+    100% {top: 0px;}
+}
+
+
+.iconAdd {
+    display: flex !important;
+    justify-content: space-around !important;
+}
+
+.iconAdd .fas {
+    font-size: 32px;
+    margin-top: 20px;
+}
+
+.iconAdd .fas:hover {
+    cursor: pointer;
+    color: #2b9aa7;
+}
+
+.card .putri2 {
+    width: 100%;
+    height: 100%;
+}
+
+/* javascript in css icon */
+
+
+/* javascript in css */
+
+.iconAdd .fas.active {
+    background-color: #2b9aa7;
+}
+
+.container.number {
+    display: none;
+}
+
+.container.number.active {
+    display: block;
+}
+
+.container.number2 {
+    display: none;
+}
+
+.container.number2.active {
+    display: block;
+}
+
+.container.number3 {
+    display: none;
+}
+
+.container.number3.active {
+    display: block;
+}
+
+.container.number4 {
+    display: none;
+}
+
+.container.number4.active {
+    display: block;
+}
+
+.container.number5 {
+    display: none;
+}
+
+.container.number5.active {
+    display: block;
+}
+
+.container.number6 {
+    display: none;
+}
+
+.container.number6.active {
+    display: block;
+}
+
+/* modal */
+
+.modal-footer .btn {
+    padding: 7px 7px;
+    color: white;
+    background-color: #2b9aa7;
+}
+
+.modal-footer .btn:hover {
+    background-color: #3cb4c2;
+}
