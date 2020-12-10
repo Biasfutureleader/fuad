@@ -5,6 +5,49 @@
     margin: 0;
     padding: 0;
 }
+.custom-shape-divider-top-1607485507 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1607485507 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 167px;
+    animation: blowMin 2s ease-in;
+}
+
+.custom-shape-divider-top-1607485507 .shape-fill {
+    fill: #ffdd59;
+}
+
+.custom-shape-divider-bottom-1607485330 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+    
+}
+
+.custom-shape-divider-bottom-1607485330 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 127px;
+    animation: blowMin 2s ease-in;
+}
+
+.custom-shape-divider-bottom-1607485330 .shape-fill {
+    fill:#ffdd59;
+}
 
 .opacity {
     display: none;
@@ -30,7 +73,7 @@
 .opacity.active .lembar {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.4), 0 0 25px rgba(0, 0, 0, 0.3), 0 0 30px rgba(0, 0, 0, 0.2) ;
     border-radius: 4px;
-    background-color: #eef;
+    background: linear-gradient(45deg, #ccc, #fff);
     top: 45%;
     left: 50%;
     height: 80vh;
@@ -46,7 +89,7 @@
     font-size: 24px;
 }
 
-.close {
+.closer {
     display: none !important;
     background-color: #fff;
     width: 40px;
@@ -60,7 +103,7 @@
     align-items: center;
 }
 
-.close.active {
+.closer.active {
     display: block !important;
     background-color: #fff;
     width: 40px;
@@ -74,22 +117,22 @@
     align-items: center;
 }
 
-.close:hover {
+.closer:hover {
     background-color: #aaa;
 }
 
-.close .icon {
+.closer .icon {
     margin-top: 2.5px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.close .icon .fas {
+.closer .icon .fas {
     font-size: 32px;
 }
 
-.close .icon .fas:hover {
+.closer .icon .fas:hover {
     cursor: pointer;
     font-size: 32px;
 }
@@ -114,9 +157,30 @@
     fill:  #3cb4c2;
 }
 
+.path2 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.path2 svg {
+    position: relative;
+    display: block;
+    width: calc(104% + 1.3px);
+    height: 187px;
+}
+
+.path2 .shape-fill {
+    fill: #2b9aa7;
+}
+
 .navbar {
     position: relative;
-    z-index: 1;
+    z-index: 2;
 }
 
 .navbar .navbar-brand {
@@ -126,6 +190,14 @@
 .navbar .navbar-brand:hover {
     color: #fff;
 }
+
+.navbar-nav .tombol {
+    display: none;
+    border: none;
+    padding: 7px 12px;
+    background-color: transparent;
+}
+
 
 .navbar-nav a {
     color: #f6e58d !important;
@@ -278,13 +350,15 @@
 }
 
 .iconAdd .fas {
+    color: #f6e58d;
+    z-index: 3;
     font-size: 32px;
     margin-top: 20px;
 }
 
 .iconAdd .fas:hover {
     cursor: pointer;
-    color: #2b9aa7;
+    color: #fff;
 }
 
 .card .putri2 {
@@ -359,4 +433,39 @@
 
 .modal-footer .btn:hover {
     background-color: #3cb4c2;
+}
+
+ button.close {
+    border: none;
+    padding: 7px 12px;
+    color: white;
+    background-color: #2b9aa7 !important;
+}
+
+button.close:hover {
+   background-color:  #3cb4c2 !important;
+}
+
+.modal-content.number3 {
+    position: relative;
+    border-radius: 32px;
+    background: url(../img/robert-anderson--gDHgEcec6Q-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 600px;
+}
+
+.modal-content.number3 .modal-body {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.modal-content.number3 .modal-body .modal-items {
+    margin: 0 10px !important;
+    /* padding: 0 10px !important; */
+}
+
+.modal-content.number3 .modal-title {
+    color: #fff;
 }

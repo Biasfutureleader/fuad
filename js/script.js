@@ -5,13 +5,14 @@ const container3 = document.getElementById('3');
 const container4 = document.getElementById('4');
 const container5 = document.getElementById('5');
 const container6 = document.getElementById('6');
+const thankYou = document.querySelector('.navbar-nav .tombol');
 const opacity = document.getElementsByClassName('opacity')[0];
-const closer = document.querySelector('.close');
+const closer = document.querySelector('.closer');
 const navbarBrand = document.querySelector('.navbar .navbar-brand');
 const audio = document.getElementsByTagName('audio')[0];
 
 
-const tanggalTujuan = new Date('Jan 8, 2021 21:59:00').getTime();
+const tanggalTujuan = new Date('Jan 9, 2021 00:00:00').getTime();
 const hitungMundur = setInterval(function() {
     const sekarang = new Date().getTime();
     const selisih = tanggalTujuan - sekarang;
@@ -32,8 +33,13 @@ const hitungMundur = setInterval(function() {
         audio.setAttribute('autoplay', '');
     };
 
+    if(selisih < 0) {
+        thankYou.style.display = "block";
+    }
+
    
 }, 1000);
+
 
 // navbarBrand 
 navbarBrand.addEventListener('click', function() {
@@ -79,24 +85,30 @@ jumboButton[4].addEventListener('click', function() {
 // cake
 
 const cake = document.getElementsByClassName('fa-birthday-cake');
-cake[0].addEventListener('click', function() {
-    container4.classList.add('active');
-    container3.classList.remove('active');
-});
-
-cake[1].addEventListener('click', function() {
-    container4.classList.add('active');
-    container5.classList.remove('active');
-    container6.classList.remove('active');
-});
 
 cake[2].addEventListener('click', function() {
+    container3.classList.remove('active');
     container4.classList.add('active');
     container5.classList.remove('active');
     container6.classList.remove('active');
 });
 
 cake[3].addEventListener('click', function() {
+    container3.classList.remove('active');
+    container4.classList.add('active');
+    container5.classList.remove('active');
+    container6.classList.remove('active');
+});
+
+cake[4].addEventListener('click', function() {
+    container3.classList.remove('active');
+    container4.classList.add('active');
+    container5.classList.remove('active');
+    container6.classList.remove('active');
+});
+
+cake[5].addEventListener('click', function() {
+    container3.classList.remove('active');
     container4.classList.add('active');
     container5.classList.remove('active');
     container6.classList.remove('active');
@@ -155,6 +167,7 @@ tanggal[3].addEventListener('click', function() {
 
 // opacity
 closer.addEventListener('click', function() {
+    console.log(closer);
     opacity.classList.remove('active');
     closer.classList.remove('active');
 });
