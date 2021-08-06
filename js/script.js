@@ -12,7 +12,7 @@ const navbarBrand = document.querySelector('.navbar .navbar-brand');
 const audio = document.getElementsByTagName('audio')[0];
 
 
-const tanggalTujuan = new Date('Jan 9, 2021 00:00:00').getTime();
+const tanggalTujuan = new Date('Dec 10, 2020 20:49:00').getTime();
 const hitungMundur = setInterval(function() {
     const sekarang = new Date().getTime();
     const selisih = tanggalTujuan - sekarang;
